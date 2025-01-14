@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek - Developer Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #0a192f;
+        color: #ccd6f6;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+      }
+      header {
+        background-color: #112240;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+      }
+      nav .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #64ffda;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #ccd6f6;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+      nav ul li a:hover {
+        color: #64ffda;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+      }
+      .leftsection h1 {
+        font-size: 2.5rem;
+        color: #64ffda;
+        margin-bottom: 1rem;
+      }
+      .leftsection .btn {
+       padding: 10px 20px;
+       border-radius: 5px;
+       background-color: #64ffda;
+       color: #0a192f;
+       font-weight: 600;
+       cursor: pointer;
+       border: none;
+       margin-right: 1rem;
+       transition: background-color 0.3s ease;
+       text-decoration: none;
+       display: inline-block;
+       text-align: center;
+       font-size: 1rem;
+       margin-top: 1rem;
+       &:hover {
+        background-color: #4caf50;
+        color: #fff;
+       }
+       &:active {
+        transform: scale(0.95);
+        transition: transform 0.2s ease;
+       } 
+       &:focus {
+        outline: none;
+       } 
+       &:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+       }
+      }
+      .rightsection img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      }
+
+
+    /* Basic HR Styling */
+    hr {
+      border: none; /* Remove default border */
+      height: 2px; /* Thickness */
+      background-color: #64ffda; /* Color */
+      width: 80%; /* Width of the HR line */
+      margin: 20px auto; /* Spacing around */
+    }
+
+    
+      .secondsection {
+        text-align: center;
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .secondsection h2 {
+        font-size: 2rem;
+        color: #64ffda;
+        margin-bottom: 2rem;
+      }
+      .work-item {
+        display: flex;
+        align-items: center;
+        background: #112240;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+      .work-item:nth-child(odd) {
+        animation-delay: 0.2s;
+      }
+      .work-item:nth-child(even) {
+        animation-delay: 0.4s;
+      }
+      .work-item img {
+        width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+        border-radius: 50%;
+      }
+      .work-item .content h3 {
+        font-size: 1.2rem;
+        color: #ccd6f6;
+        margin-bottom: 0.5rem;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      #element {
+        color: #64ffda;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+
+
+
+
+      footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #112240;
+    color: #8892b0;
+    padding: 2rem 1rem;
+    margin-top: auto;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .footer h3 {
+    color: #64ffda;
+    margin-bottom: 1rem;
+  }
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer ul li {
+    margin-bottom: 0.5rem;
+    color: #ccd6f6;
+    cursor: pointer;
+  }
+  .footer ul li:hover {
+    color: #64ffda;
+  }
+  footer p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer p span {
+    color: #64ffda;
+  }
+  footer p a {
+    color: #64ffda;
+    text-decoration: none;
+  }
+  footer p a:hover {
+    text-decoration: underline;
+  }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Abhishek's Portfolio</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          <h1>Hello, I'm Abhishek</h1>
+          <p>
+            I am a passionate <span id="element"></span><br> Let's create something
+            amazing together!
+            <br>
+            <div class="button">
+              <a href="MYRESUMEF2.pdf" class="btn" target="_blank" rel="noopener noreferrer" class="btn" id="btn1">Download Resume</a>
+
+              <a href="https://github.com/developerAbhi02" target="_blank" rel="noopener noreferrer" class="btn" id="btn2">Visit Github</a>
+            </div>
+          </p>
+        </div>
+        <div class="rightsection">
+          <img src="bg.png" alt="Abhishek" />
+        </div>
+      </section>
+<hr>
+      <section class="secondsection">
+        <h2>Work Experience</h2>
+        <div class="work-item">
+          <img src="htmlimg.png" alt="Node.js Developer" />
+          <div class="content">
+            <h3>HTML Developer (2012-2015)</h3>
+            <p>
+              Designed and implemented responsive web layouts using HTML, CSS, JS.
+            </p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="nodeimg.png" alt="Node.js Developer" />
+          <div class="content">
+            <h3>Node.js Developer (2015-2020)</h3>
+            <p>
+              Built and maintained scalable server-side applications using
+              Node.js.
+            </p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="frontimg.png" alt="Frontend Developer" />
+          <div class="content">
+            <h3>Frontend Developer (2020-2022)</h3>
+            <p>
+              Developed responsive web interfaces using modern frameworks and
+              tools.
+            </p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="dev.png" alt="Frontend Developer" />
+          <div class="content">
+            <h3>Fullstack Developer (2022-Present)</h3>
+            <p>
+              Developed responsive web interfaces using modern frameworks and
+              tools.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+     <div class="footer">
+    <div class="footer-first">
+      <h3>Abhishek's Portfolio</h3>
+      <p>Building modern and impactful web solutions.</p>
+    </div>
+    <div class="footer-second">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        
+      </ul>
+    </div>
+    <div class="footer-third">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: xxxxx@outlook.com</li>
+        <li>Phone: 99XXXXX548</li>
+        <li>Location: Sonbhadra, India</li>
+      </ul>
+    </div>
+    <div class="footer-fourth">
+      <h3>Follow Me</h3>
+      <ul>
+        <li>GitHub: developerAbhi02</li>
+        <li>LinkedIn: developerAbhi02</li>
+        <li>Twitter: @AbhiDev02</li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    &copy; 2025 Abhishek Kumar Gupta | Built with <span>&hearts;</span>. View on
+    <a href="https://github.com/developerAbhi02" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer.",
+          "Graphic Designer.",
+          "Content Creator.",
+          "Video Editor.",
+          "Web Designer.",
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
