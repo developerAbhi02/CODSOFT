@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,412 +7,545 @@
   <title>Abhishek - Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <style>
-    /* General Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #0a192f;
-      color: #ccd6f6;
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #112240;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #64ffda;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #ccd6f6;
-      transition: color 0.3s ease;
-      font-weight: 500;
-    }
-
-    nav ul li a:hover {
-      color: #64ffda;
-    }
-
-    /* Responsive Navigation */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-    }
-
-    .firstsection {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-    }
-
-    .leftsection {
-      flex: 1;
-      text-align: left;
-      max-width: 600px;
-    }
-
-    .leftsection h1 {
-      font-size: 2.5rem;
-      color: #64ffda;
-      margin-bottom: 1rem;
-    }
-
-    .leftsection .btn {
-      padding: 10px 20px;
-      border-radius: 5px;
-      background-color: #64ffda;
-      color: #0a192f;
-      font-weight: 600;
-      cursor: pointer;
-      border: none;
-      margin-right: 1rem;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-
-    .leftsection .btn:hover {
-      background-color: #4caf50;
-      color: #fff;
-    }
-
-    .rightsection {
-      flex: 1;
-      text-align: center;
-    }
-
-    .rightsection img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Adjustments for Small Screens */
-    @media (max-width: 768px) {
-      .firstsection {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .rightsection img {
-        max-width: 250px;
-      }
-
-      .leftsection h1 {
-        font-size: 2rem;
-      }
-    }
-
-    hr {
-      border: none;
-      height: 2px;
-      background-color: #64ffda;
-      width: 80%;
-      margin: 20px auto;
-    }
-
-    .secondsection {
-      text-align: center;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .secondsection h2 {
-      font-size: 2rem;
-      color: #64ffda;
-      margin-bottom: 2rem;
-    }
-
-    .work-item {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      background: #112240;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .work-item img {
-      width: 60px;
-      height: 60px;
-      margin-right: 1rem;
-      border-radius: 50%;
-    }
-
-    .work-item .content h3 {
-      font-size: 1.2rem;
-      color: #ccd6f6;
-      margin-bottom: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .work-item {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .work-item img {
-        margin-bottom: 1rem;
-      }
-    }
-
-    footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #112240;
-      color: #8892b0;
-      padding: 2rem 1rem;
-      margin-top: auto;
-    }
-
-    .footer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-around;
-      width: 100%;
-      max-width: 1200px;
-    }
-
-    .footer h3 {
-      color: #64ffda;
-      margin-bottom: 1rem;
-    }
-
-    .footer ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer ul li {
-      margin-bottom: 0.5rem;
-      color: #ccd6f6;
-    }
-
-    .footer ul li:hover {
-      color: #64ffda;
-
-      cursor: pointer;
-
-      transition: color 0.3s ease;
-
-    }
-
-    @media (max-width: 768px) {
-      footer {
-        text-align: center;
-      }
-
-      .footer {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-
-    footer p {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    footer p span {
-      color: #64ffda;
-    }
-
-    footer p a {
-      color: #64ffda;
-      text-decoration: none;
-    }
-
-    footer p a:hover {
-      text-decoration: underline;
-    }
-
-    #element {
-      color: #64ffda;
-      font-weight: 600;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Background Effects -->
+  <div class="background-effects">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
   <header>
     <nav>
-      <div class="logo">Abhishek's Portfolio</div>
+      <div class="logo">
+        <div class="profile-nav">
+          <img src="profile.jpg" alt="Profile" class="nav-profile-pic">
+          <div class="logo-container">
+            <span class="logo-text">A</span>
+            <div class="logo-ring"></div>
+          </div>
+        </div>
+      </div>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
+      <div class="nav-right">
+        <div class="theme-switch">
+          <input type="checkbox" id="theme-toggle">
+          <label for="theme-toggle" class="theme-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <span class="ball"></span>
+          </label>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
   </header>
+
+  <!-- Navigation Menu Box -->
+  <div class="nav-menu-box" id="nav-menu">
+    <div class="menu-header">
+        <div class="profile-info">
+            <img src="profile.jpg" alt="Profile" class="menu-profile-pic">
+            <div class="profile-text">
+                <h3>Abhishek Kumar</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="menu-footer">
+        <div class="social-links">
+            <a href="#" class="github"><i class="fab fa-github"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+  </div>
+
   <main>
-    <section class="firstsection">
+    <!-- First Section -->
+    <section class="firstsection" id="home">
+      <div class="rightsection">
+        <img src="body.png" alt="Abhishek" />
+      </div>
       <div class="leftsection">
         <h1>Hello, I'm Abhishek</h1>
         <p>
-          I am a passionate <span id="element"></span><br> Let's create something
-          amazing together!
-          <br>
-        <div class="button">
-          <a href="MYRESUMEF2.pdf" class="btn" target="_blank" rel="noopener noreferrer" class="btn" id="btn1">Download
-            Resume</a>
-
-          <a href="https://github.com/developerAbhi02" target="_blank" rel="noopener noreferrer" class="btn"
-            id="btn2">Visit Github</a>
-        </div>
+          I am a <span class="typed-text-wrapper"><span id="element"></span></span><br>
+          Let's create something amazing together!
         </p>
-      </div>
-      <div class="rightsection">
-        <img src="bg.png" alt="Abhishek" />
+        <div class="button">
+          <a href="MYRESUMEF2.pdf" class="btn" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="https://github.com/developerAbhi02" target="_blank" rel="noopener noreferrer" class="btn">
+            <i class="fab fa-github"></i> Visit Github
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-container glass-effect">
+        <div class="about-content">
+          <div class="about-header">
+            <div class="about-avatar">
+              <img src="profile.jpg" alt="Abhishek Kumar" class="avatar-img">
+              <div class="status-badge">
+                <span class="status-dot"></span>
+                Open to Work
+              </div>
+            </div>
+            <div class="about-intro">
+              <h3>👋 Hello World!</h3>
+              <p class="lead-text">I'm Abhishek, a passionate full-stack developer from India who loves turning ideas into reality through elegant code.</p>
+              <div class="quick-info">
+                <span><i class="fas fa-map-marker-alt"></i> Sonbhadra, UP</span>
+                <span><i class="fas fa-code"></i> 2+ years coding</span>
+                <span><i class="fas fa-project-diagram"></i> 10+ projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-description">
+            <p>I specialize in building exceptional digital experiences that live at the intersection of form and function. With a deep passion for both frontend and backend development, I create solutions that are not just visually appealing but also technically robust.</p>
+            <p>When I'm not coding, you'll find me exploring new technologies, playing chess, or contributing to open-source projects.</p>
+          </div>
+          
+          <!-- Education Section -->
+          <div class="education-section glass-effect">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="education-item">
+              <div class="education-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="education-details">
+                <h4>Bachelor of Computer Applications</h4>
+                <p class="institution">Sant Gahira Guru University</p>
+                <p class="duration"><i class="far fa-calendar-alt"></i> Expected Graduation: April 2025</p>
+                <div class="education-tags">
+                  <span>Computer Science</span>
+                  <span>Web Development</span>
+                  <span>Software Engineering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements Section with Timeline -->
+          <div class="achievements-section glass-effect">
+            <h3><i class="fas fa-trophy"></i> Achievements</h3>
+            <div class="achievements-timeline">
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Student of the Year 2022</h4>
+                  <p>Recognized for outstanding academic performance and leadership qualities</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-chess-knight"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>2nd Rank in State-Level Chess Tournament</h4>
+                  <p>Chhattisgarh State Chess Championship</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>International Math Wizard Olympiad</h4>
+                  <ul>
+                    <li>Gold Medalist - CPS IMWO 2018 Level 2</li>
+                    <li>Gold Medalist - CPS IMWO 2017 Level 2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages Section -->
+          <div class="languages-section glass-effect">
+            <h3><i class="fas fa-language"></i> Languages</h3>
+            <div class="language-items">
+              <div class="language-item">
+                <div class="language-icon">
+                  <i class="fas fa-language"></i>
+                </div>
+                <div class="language-details">
+                  <span>Hindi</span>
+                  <div class="proficiency-bar">
+                    <div class="proficiency-level native"></div>
+                  </div>
+                  <p>Native</p>
+                </div>
+              </div>
+              <div class="language-item">
+                <div class="language-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="language-details">
+                  <span>English</span>
+                  <div class="proficiency-bar">
+                    <div class="proficiency-level fluent"></div>
+                  </div>
+                  <p>Fluent</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <hr>
-    <section class="secondsection">
+    <section class="secondsection" id="experience">
       <h2>Work Experience</h2>
+      <div class="work-items-container">
       <div class="work-item">
-        <img src="htmlimg.png" alt="Node.js Developer" />
+          <img src="dev.png" alt="Web Developer Intern" />
         <div class="content">
-          <h3>HTML Developer (2012-2015)</h3>
-          <p>
-            Designed and implemented responsive web layouts using HTML, CSS, JS.
-          </p>
+            <h3>Web Developer Intern | CodSoft</h3>
+            <p>Dec 2024 - Jan 2025</p>
+            <ul>
+              <li>Developed and maintained web applications, showcasing strong problem-solving and coding skills</li>
+              <li>Collaborated with team members to enhance application features, fix bugs, and improve performance</li>
+              <li>Demonstrated proficiency in full-stack development with a focus on delivering high-quality projects</li>
+            </ul>
+            <div class="tech-stack">
+              <span><i class="fab fa-html5"></i> HTML5</span>
+              <span><i class="fab fa-css3"></i> CSS3</span>
+              <span><i class="fab fa-js"></i> JavaScript</span>
+              <span><i class="fab fa-react"></i> React.js</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="work-item">
-        <img src="nodeimg.png" alt="Node.js Developer" />
-        <div class="content">
-          <h3>Node.js Developer (2015-2020)</h3>
-          <p>
-            Built and maintained scalable server-side applications using
-            Node.js.
-          </p>
+    </section>
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Command Line</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+    <section class="projects-section" id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-container">
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <!-- Password Manager SVG -->
+            <svg class="project-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.61462 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.61462 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3>PASS X | Password Manager</h3>
+            <p>A full-stack web application for secure password management built with React.js and MongoDB. Features include:</p>
+            <ul>
+              <li>Encryption & secure vault system with bcrypt</li>
+              <li>Password storage and management</li>
+              <li>Health analysis and password sharing</li>
+              <li>Built responsive UI with React.js, TailwindCSS</li>
+            </ul>
+            <div class="project-tech">
+              <span><i class="fab fa-react"></i> React.js</span>
+              <span><i class="fab fa-node-js"></i> Node.js</span>
+              <span><i class="fas fa-database"></i> MongoDB</span>
+              <span><i class="fab fa-css3"></i> TailwindCSS</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <!-- Code Editor SVG -->
+            <svg class="project-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 6H16M6 12H18M8 18H16M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3>CodeSync | Collaborative Code Editor</h3>
+            <p>A real-time collaborative code editor with features like live coding, syntax highlighting, and team collaboration.</p>
+            <ul>
+              <li><i class="fas fa-code"></i> Real-time code synchronization</li>
+              <li><i class="fas fa-users"></i> Multi-user collaboration</li>
+              <li><i class="fas fa-terminal"></i> Multiple programming language support</li>
+              <li><i class="fas fa-comments"></i> Integrated chat system</li>
+            </ul>
+            <div class="project-tech">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fab fa-node-js"></i> Node.js</span>
+              <span><i class="fas fa-bolt"></i> Socket.IO</span>
+              <span><i class="fab fa-js"></i> Monaco Editor</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image">
+            <!-- Chess Tournament SVG -->
+            <svg class="project-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 3H15M12 3V6M12 6C10.3431 6 9 7.34315 9 9C9 9.93137 9.4022 10.768 10.0559 11.3219C10.0212 11.3817 10 11.4485 10 11.5207V13H14V11.5207C14 11.4485 13.9788 11.3817 13.9441 11.3219C14.5978 10.768 15 9.93137 15 9C15 7.34315 13.6569 6 12 6ZM7 21H17M8 13H16L17 17H7L8 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3>SwissChess | Tournament Manager</h3>
+            <p>A comprehensive chess tournament management system with real-time game tracking and analytics.</p>
+            <ul>
+              <li><i class="fas fa-chess"></i> Tournament bracket management</li>
+              <li><i class="fas fa-chart-line"></i> Player statistics and rankings</li>
+              <li><i class="fas fa-clock"></i> Real-time game monitoring</li>
+              <li><i class="fas fa-trophy"></i> Tournament history and achievements</li>
+            </ul>
+            <div class="project-tech">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fas fa-database"></i> MongoDB</span>
+              <span><i class="fab fa-node-js"></i> Express.js</span>
+              <span><i class="fas fa-chess-knight"></i> Chess.js</span>
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="work-item">
-        <img src="frontimg.png" alt="Frontend Developer" />
-        <div class="content">
-          <h3>Frontend Developer (2020-2022)</h3>
-          <p>
-            Developed responsive web interfaces using modern frameworks and
-            tools.
-          </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Talk!</h3>
+          <p>Feel free to reach out for collaborations or just a friendly hello</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:abhi_dev02@outlook.com">abhi_dev02@outlook.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:+918957536528">+91 8957536528</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Sonbhadra, Uttar Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="github"><i class="fab fa-github"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-      </div>
-      <div class="work-item">
-        <img src="dev.png" alt="Frontend Developer" />
-        <div class="content">
-          <h3>Fullstack Developer (2022-Present)</h3>
-          <p>
-            Developed responsive web interfaces using modern frameworks and
-            tools.
-          </p>
+        <div class="contact-form">
+          <h3>Send Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="footer">
-      <div class="footer-first">
-        <h3>Abhishek's Portfolio</h3>
-        <p>Building modern and impactful web solutions.</p>
-      </div>
-      <div class="footer-second">
-        <h3>Quick Links</h3>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
+    <div class="footer-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="var(--bg-secondary)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
 
-        </ul>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo-container">
+            <span class="logo-text">A</span>
+            <div class="logo-ring"></div>
+          </div>
+          <p class="footer-tagline">Building digital experiences with passion and precision</p>
       </div>
-      <div class="footer-third">
-        <h3>Contact</h3>
-        <ul>
-          <li>Email: xxxxx@outlook.com</li>
-          <li>Phone: 99XXXXX548</li>
-          <li>Location: Sonbhadra, India</li>
-        </ul>
+        
+        <div class="footer-social">
+          <h3>Connect With Me</h3>
+          <div class="social-links">
+            <a href="#" class="github"><i class="fab fa-github"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="footer-fourth">
-        <h3>Follow Me</h3>
-        <ul>
-          <li>GitHub: developerAbhi02</li>
-          <li>LinkedIn: developerAbhi02</li>
-          <li>Twitter: @AbhiDev02</li>
-        </ul>
+
+      <div class="footer-bottom">
+        <div class="footer-info">
+          <p>&copy; 2024 <span class="highlight">Abhishek Kumar Gupta</span> | All Rights Reserved</p>
+          <p>Built with <span class="heart">&hearts;</span> using Modern Web Technologies</p>
+        </div>
+        <div class="footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/sitemap">Sitemap</a>
+      </div>
       </div>
     </div>
-    <p>
-      &copy; 2025 Abhishek Kumar Gupta | Built with <span>&hearts;</span>. View on
-      <a href="https://github.com/developerAbhi02" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </p>
   </footer>
 
+  <div id="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed("#element", {
-      strings: [
-        "Web Developer.",
-        "Graphic Designer.",
-        "Content Creator.",
-        "Video Editor.",
-        "Web Designer.",
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true,
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/contact.js"></script>
 </body>
 
 </html>
